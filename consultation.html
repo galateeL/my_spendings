@@ -7,89 +7,102 @@
     </head>
 
     <body> 
-	
-		<h1>My spendings</h1>
-		<p>Bienvenue sur l'application My spendings ! <br> Ayez une vision de vos dépenses afin de prévoir vos prochaines vancances !!!!</p>
-		<div class="bouton">
-			<input type="submit" value="Saisir une nouvelle dépense" id="bouton-saisie">
-		</div>	
 		
-		<form method="post" action="form.php">
-			<fieldset>
-				<legend>Consultation de dépenses</legend>
-				
-				<div>
-					<label for="month-select"> Séléctionnez un mois : </label>
-					<select name="months" id="month-select">
-						<option value=""> -- Choisir un mois --</option>
-						<option value="01">Janvier</option>
-						<option value="02">Février</option>
-						<option value="03">Mars</option>
-						<option value="04">Avril</option>
-						<option value="05">Mai</option>
-						<option value="06">Juin</option>
-						<option value="07">Juillet</option>
-						<option value="08">Août</option>
-						<option value="09">Septembre</option>
-						<option value="10">Octobre</option>
-						<option value="11">Novembre</option>
-						<option value="12">Décembre</option>
+		<header>
+			<h1>My spendings</h1>
+			<p>Bienvenue sur l'application My spendings ! <br> Ayez une vision de vos dépenses afin de prévoir vos prochaines vancances !!!!</p>
+		</header>
+		
+		<nav>
+			<div class="bouton">
+				<input type="submit" value="Consulter des dépenses" id="bouton-consultation">
+				<input type="submit" value="Saisir une nouvelle dépense" id="bouton-saisie">
+			</div>			
+		</nav>		
+			
+		<section>
+			<form method="post" action="form.php">
+				<fieldset>
+					<legend>Consultation de dépenses</legend>
+					
+					<div>
+						<label for="month-select"> Séléctionnez un mois : </label>
+						<select name="months" id="month-select">
+							<option value=""> -- Choisir un mois --</option>
+							<option value="01">Janvier</option>
+							<option value="02">Février</option>
+							<option value="03">Mars</option>
+							<option value="04">Avril</option>
+							<option value="05">Mai</option>
+							<option value="06">Juin</option>
+							<option value="07">Juillet</option>
+							<option value="08">Août</option>
+							<option value="09">Septembre</option>
+							<option value="10">Octobre</option>
+							<option value="11">Novembre</option>
+							<option value="12">Décembre</option>
+						</select>
+					</div>
+					
+					<div>
+						<label for="year-select">Séléctionnez une année : </label>
+						<select name="years" id="year-select">
+							<option value="">-- Choisir une année --</option>
+							<option value="2020">2020</option>
+							<option value="2021">2021</option>
+							<option value="2022">2022</option>
+							<option value="2023">2023</option>
+							<option value="2024">2024</option>
+							<option value="2025">2025</option>
 					</select>
-				</div>
-				
-				<div>
-					<label for="year-select">Séléctionnez une année : </label>
-					<select name="years" id="year-select">
-						<option value="">-- Choisir une année --</option>
-						<option value="2020">2020</option>
-						<option value="2021">2021</option>
-						<option value="2022">2022</option>
-						<option value="2023">2023</option>
-						<option value="2024">2024</option>
-						<option value="2025">2025</option>
-				</select>
-				</div>
-				
-				<div class="bouton">
-					<input type="submit" value="Consulter" id="bouton-consulter">
-				</div>
-			</fieldset>	
-		</form>
+					</div>
+					
+					<div class="bouton">
+						<input type="submit" value="Consulter" id="bouton-consulter">
+					</div>
+				</fieldset>				
+			</form>
+		</section>
+			
+		<section>		
+			<table>
+				<tr>
+					<td>Date</td>
+					<td>Libellé</td>
+					<td>Montant</td>
+					<td>Catégorie</td>
+					<td>Modification</td>
+					<td>Suppression</td>
+				</tr>
+				<tr>
+					<td>26/01/2020</td>
+					<td>Achat d'une bouteille de lait</td>
+					<td>1.80€</td>
+					<td>Alimentation</td>
+					<td>
+						<img src="infographie/modification.png" alt"Modification">
+					</td>
+					<td>
+						<img src="infographie/suppression.png" alt"Suppresssion">
+					</td>
+				</tr>
+				<tr>
+					<td>27/01/2020</td>
+					<td>...</td>
+					<td>...</td>
+					<td>...</td>
+					<td>
+						<img src="infographie/modification.png" alt"Modification">
+					</td>
+					<td>
+						<img src="infographie/suppression.png" alt"Suppresssion">
+					</td>
+				</tr>
+			</table>
+		</section>	
 		
-		<table>
-			<tr>
-				<td>Date</td>
-				<td>Libellé</td>
-				<td>Montant</td>
-				<td>Catégorie</td>
-				<td>Modification</td>
-				<td>Suppression</td>
-			</tr>
-			<tr>
-				<td>26/01/2020</td>
-				<td>Achat d'une bouteille de lait</td>
-				<td>1.80€</td>
-				<td>Alimentation</td>
-				<td>
-					<img src="infographie/modification.png" alt"Modification">
-				</td>
-				<td>
-					<img src="infographie/suppression.png" alt"Suppresssion">
-				</td>
-			</tr>
-			<tr>
-				<td>27/01/2020</td>
-				<td>...</td>
-				<td>...</td>
-				<td>...</td>
-				<td>
-					<img src="infographie/modification.png" alt"Modification">
-				</td>
-				<td>
-					<img src="infographie/suppression.png" alt"Suppresssion">
-				</td>
-			</tr>
-		</table>
-    
+		<footer>
+			<p>Copyright Minitou - Tous droits réservés - 2020</p>
+		</footer>
     </body>
 </html>
