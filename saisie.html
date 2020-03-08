@@ -8,45 +8,60 @@
 
     <body> 
 	
-		<h1>My spendings</h1>
-		<p>Bienvenue sur la page de saisie !  <br> Démarrez en entrant vos nouvelles dépenses ! </p>
+		<header>
+			<h1>My spendings</h1>
+			<p>Bienvenue sur la page de saisie !  <br> Démarrez en entrant vos nouvelles dépenses ! </p>
+		</header>
 		
-		<form method="post" action="form.php">
-		
-			<fieldset>
-				<legend>Saisie d'une dépense</legend>
+		<nav>
+			<div class="bouton">
+				<input type="submit" value="Consulter des dépenses">
+				<input type="submit" value="Saisir une nouvelle dépense">
+			</div>
+		</nav>
 			
-				<div class="champ">
-					<label for="choix-date"> Date </label>
-					<input type="date" id="choix-date">
-				</div>
-				<div class="champ">
-					<label for="choix-libelle"> Libellé </label>
-					<input type="text" id="choix-libelle">
-				</div>
-				<div class="champ">
-					<label for="choix-montant"> Montant </label>
-					<input type="number" min="0" placeholder="montant en €" id="choix-montant">
-				</div>
-				<div class="champ">	
-					<label for="category-select"> Catégorie </label>
-					<select name="category" id="category-select">
-						<option value="">-- Choisir une catégorie --</option>
-						<option value="alim">Alimentation</option>
-						<option value="hyg">Hygiène - Beauté</option>
-						<option value="loisirs">Loisirs</option>
-						<option value="logement">Logement</option>
-						<option value="tél">Téléphonie - Internet</option>
-						<option value="transport">Transport</option>
-						<option value="div">Divers</option>
-					</select>
-				</div>
-				<div class="bouton">	
-					<input type="submit" value="Valider" id="bouton-valider">
-					<input type="submit" value="Annuler" id="bouton-annuler">
-				</div>
-			</fieldset>
-		</form>
-
+		<section>
+			<form method="post" action="form.php">
+			
+				<fieldset>
+					<legend>Saisie d'une dépense</legend>
+				
+					<div class="champ">
+						<label for="choix-date"> Date </label>
+						<input type="date" id="choix-date">
+					</div>
+					<div class="champ">
+						<label for="choix-libelle"> Libellé </label>
+						<input type="text" id="choix-libelle">
+					</div>
+					<div class="champ">
+						<label for="choix-montant"> Montant </label>
+						<input type="number" min="0" placeholder="montant en €" id="choix-montant">
+					</div>
+					<div class="champ">	
+						<label for="category-select"> Catégorie </label>
+						<select name="category" id="category-select">
+							<option value="">-- Choisir une catégorie --</option>
+							<option value="alim">Alimentation</option>
+							<option value="hyg">Hygiène - Beauté</option>
+							<option value="loisirs">Loisirs</option>
+							<option value="logement">Logement</option>
+							<option value="tél">Téléphonie - Internet</option>
+							<option value="transport">Transport</option>
+							<option value="div">Divers</option>
+						</select>
+					</div>
+					<div class="bouton">	
+						<input type="submit" value="Valider" id="bouton-valider">
+						<input type="submit" value="Annuler" id="bouton-annuler">
+					</div>
+				</fieldset>
+			</form>
+		</section>	
+		
+		<footer>
+			<p>Copyright Minitou - Tous droits réservés - 2020</p>
+		</footer>
+	
     </body>
 </html>
